@@ -1,8 +1,6 @@
-package com.dcac.progressionbar;
+package com.dcac.progressionbar.ui.fragment;
 
 import android.app.AlertDialog;
-import android.app.ProgressDialog;
-import android.os.AsyncTask;
 import android.os.Bundle;
 
 import androidx.annotation.NonNull;
@@ -19,6 +17,7 @@ import android.widget.ProgressBar;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.dcac.progressionbar.R;
 import com.dcac.progressionbar.databinding.FragmentProgressBarBinding;
 
 import java.util.concurrent.Executor;

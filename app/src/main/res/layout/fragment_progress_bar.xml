@@ -5,7 +5,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:padding="16dp"
     android:background="@color/black"
-    tools:context=".ProgressBarFragment">
+    tools:context=".ui.fragment.ProgressBarFragment">
 
     <Button
         android:layout_centerHorizontal="true"

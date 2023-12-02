@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/black"
+    tools:context=".ui.fragment.NumberToConsoleFragment"
+    android:padding="16dp">
+
+    <TextView
+        android:id="@+id/affichage_number_console"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="0"
+        android:textSize="24sp"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:layout_marginTop="100dp" />
+
+    <Button
+        android:id="@+id/button_number_console"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/send"
+        android:layout_below="@id/affichage_number_console"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp" />
+
+
+</RelativeLayout>

@@ -1,4 +1,4 @@
-package com.dcac.progressionbar;
+package com.dcac.progressionbar.ui.fragment;
 
 import android.os.Bundle;
 
@@ -13,7 +13,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
-import com.dcac.progressionbar.databinding.FragmentProgressBarBinding;
+import com.dcac.progressionbar.R;
 import com.dcac.progressionbar.databinding.FragmentWelcomeBinding;
 
 /**
@@ -51,16 +51,31 @@ public class WelcomeFragment extends Fragment {
 
         int backgroundColor = ContextCompat.getColor(getContext(), R.color.light_orange);
 
-        binding.buttonLetsGo.setBackgroundColor(backgroundColor);
-        binding.buttonLetsGo.setEnabled(true);
+        binding.buttonProgressionBar.setBackgroundColor(backgroundColor);
+        binding.buttonNumberToConsole.setBackgroundColor(backgroundColor);
 
-        binding.buttonLetsGo.setOnClickListener(new View.OnClickListener() {
+        binding.buttonProgressionBar.setEnabled(true);
+        binding.buttonNumberToConsole.setEnabled(true);
+
+        binding.buttonProgressionBar.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 FragmentManager fragmentManager = getParentFragmentManager();
                 FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
                 ProgressBarFragment progressBarFragment = ProgressBarFragment.newInstance();
                 fragmentTransaction.add(R.id.fragment_container, progressBarFragment);
+                fragmentTransaction.addToBackStack(null);
+                fragmentTransaction.commit();
+            }
+        });
+
+        binding.buttonNumberToConsole.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                FragmentManager fragmentManager = getParentFragmentManager();
+                FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
+                NumberToConsoleFragment numberToConsoleFragment= NumberToConsoleFragment.newInstance();
+                fragmentTransaction.add(R.id.fragment_container, numberToConsoleFragment);
                 fragmentTransaction.addToBackStack(null);
                 fragmentTransaction.commit();
             }

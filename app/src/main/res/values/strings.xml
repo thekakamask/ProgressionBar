@@ -5,6 +5,7 @@
     <!-- Welcome Fragment -->
     <string name="let_s_go">Let\'s go</string>
 
+
     <!-- ProgressBarFragment -->
     <string name="start_download">Begin to download</string>
 
@@ -12,6 +13,11 @@
     <string name="downloading">Downloading in progress</string>
     <string name="progress_pourcentage">0%</string>
     <string name="progress_value">0/100</string>
+    <string name="go_to_progression_bar">Let\'s go to progression bar</string>
+    <string name="number_to_console">Let\'s go to \"number to console\"</string>
+
+    <!-- NumberToConsoleFragment -->
+    <string name="send">Send number</string>
 
 
 </resources>

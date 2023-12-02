@@ -1,4 +1,4 @@
-package com.dcac.progressionbar;
+package com.dcac.progressionbar.ui.activity;
 
 import androidx.appcompat.app.AppCompatActivity;
 

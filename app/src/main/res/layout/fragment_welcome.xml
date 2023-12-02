@@ -5,14 +5,23 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:padding="16dp"
     android:background="@color/white"
-    tools:context=".WelcomeFragment">
+    tools:context=".ui.fragment.WelcomeFragment">
 
     <Button
         android:layout_centerHorizontal="true"
         android:layout_centerVertical="true"
-        android:id="@+id/button_lets_go"
+        android:id="@+id/button_progression_bar"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/let_s_go"/>
+        android:text="@string/go_to_progression_bar"/>
+
+    <Button
+        android:layout_below="@+id/button_progression_bar"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:id="@+id/button_number_to_console"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/number_to_console"/>
 
 </RelativeLayout>
