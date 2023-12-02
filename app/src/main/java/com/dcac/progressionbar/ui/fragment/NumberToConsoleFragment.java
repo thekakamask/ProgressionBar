@@ -5,6 +5,9 @@ import android.os.Bundle;
 
 import androidx.core.content.ContextCompat;
 import androidx.fragment.app.Fragment;
+import androidx.work.Data;
+import androidx.work.OneTimeWorkRequest;
+import androidx.work.WorkManager;
 
 import android.view.LayoutInflater;
 import android.view.View;
@@ -47,15 +50,18 @@ public class NumberToConsoleFragment extends Fragment {
 
         // Configurez le listener pour le bouton.
         binding.buttonNumberConsole.setOnClickListener(v -> {
-            Intent i = new Intent(getActivity(), IntentServiceExample.class);
-            i.putExtra(IntentServiceExample.EXTRA_COMPTEUR, mCompteur);
+            Data data = new Data.Builder()
+                    .putInt(CompteurWorker.EXTRA_COMPTEUR, mCompteur)
+                    .build();
 
+            OneTimeWorkRequest compteurWorkRequest = new OneTimeWorkRequest.Builder(CompteurWorker.class)
+                    .setInputData(data)
+                    .build();
+
+            WorkManager.getInstance(getContext()).enqueue(compteurWorkRequest);
 
             mCompteur++;
             binding.affichageNumberConsole.setText(String.valueOf(mCompteur));
-
-            // Assurez-vous que le service est déclaré dans votre fichier AndroidManifest.xml
-            getActivity().startService(i);
         });
 
         return binding.getRoot();
